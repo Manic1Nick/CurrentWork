@@ -11,7 +11,7 @@ public class StudentUtils {
 
         String name = generateName();
         Birthday birthday = generateDay();
-        Contact contact = generateContact();
+        Contact contact = generateContact(name);
         Address address = generateAddress();
 
         double paidMoney = generatePaidMoney();
@@ -36,8 +36,8 @@ public class StudentUtils {
         return new Birthday((generateNum(1970, 1990)),(generateNum(0, 12)),(generateNum(0, 31)));
     }
 
-    private static Contact generateContact() {
-        return new Contact(generatePhone(), generateEmail("xxx"));
+    private static Contact generateContact(String name) {
+        return new Contact(generatePhone(), generateEmail(name));
     }
 
     private static String generatePhone() {

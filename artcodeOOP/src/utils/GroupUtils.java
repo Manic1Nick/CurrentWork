@@ -29,6 +29,7 @@ public class GroupUtils {
         for (int i = 0; i < group.length; i++) {
             if (group[i].getName().equals(name)) {
                 getNum = i;
+                break;
             }
         }
         return getNum;
